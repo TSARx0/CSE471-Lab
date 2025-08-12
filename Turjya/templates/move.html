@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MOVE - Truck Rental</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        /* Section 1 */
+        #section1 {
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+        #t1 { font-size: 32px; margin: auto; }
+        #bt1 { background: white; color: black; border: none; padding: 10px; cursor: pointer; }
+        .user-icon {
+            background: white;
+            color: red;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        /* Section 2 & 3 */
+        .section-box {
+            width: 80%;
+            background: #e0e0e0;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        h2 { margin-left: 10%; }
+        select, input, textarea {
+            width: 100%; padding: 10px; margin-top: 10px;
+        }
+        /* Section 4 */
+        #bt3 {
+            display: block;
+            margin: auto;
+            padding: 15px 30px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Section 1 -->
+<div id="section1">
+    <button id="bt1" onclick="window.location.href='home.html'">Back</button>
+    <h1 id="t1">MOVE</h1>
+    <div class="user-icon" onclick="window.location.href='user.html'">&#128100;</div>
+</div>
+
+<form action="/submit" method="POST">
+    <!-- Section 2 -->
+    <h2 id="t2">Object category</h2>
+    <div class="section-box">
+        <select name="object" required>
+            <option value="">-- Select Object --</option>
+            {% for obj in objects %}
+                <option value="{{ obj.id }}">{{ obj.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="t3">Location</h2>
+    <div class="section-box">
+        <input type="text" name="from_district" placeholder="From District" required>
+        <input type="text" name="to_district" placeholder="To District" required>
+        <textarea name="from_address" placeholder="From Address" required></textarea>
+        <textarea name="to_address" placeholder="To Address" required></textarea>
+    </div>
+
+    <!-- Section 4 -->
+    <button id="bt3" type="submit">Confirm payment</button>
+</form>
+
+</body>
+</html>
