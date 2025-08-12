@@ -1,0 +1,13 @@
+# Copy this file to .env and fill in your actual Supabase credentials
+# Make sure to restart your dev server after creating the .env file
+
+VITE_SUPABASE_URL=https://your-project-id.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key-here
+
+# Instructions:
+# 1. Go to your Supabase project dashboard
+# 2. Click on Settings > API
+# 3. Copy the "Project URL" to VITE_SUPABASE_URL
+# 4. Copy the "anon public" key to VITE_SUPABASE_ANON_KEY
+# 5. Save this file as .env (not .env.txt)
+# 6. Restart your development server 
