@@ -63,19 +63,19 @@ function App() {
       </div>
     );
   }
-
-  return (
-    <div>
-      <ul>
-        {notes.map((note, index) => (
-          <li key={index}>{note.content}</li>
-        ))}
-      </ul>
-      <h1>hello from app.js, updated</h1>
-      <button onClick={handleLogout}>Log Out</button>
-    </div>
-  );
-}
+window.location.href = "http://127.0.0.1:5000/"
+//   return (
+//     <div>
+//       <ul>
+//         {notes.map((note, index) => (
+//           <li key={index}>{note.content}</li>
+//         ))}
+//       </ul>
+//       <h1>hello from app.js, updated</h1>
+//       <button onClick={handleLogout}>Log Out</button>
+//     </div>
+//   );
+// }
 
 export default App;
 
